@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script src="scripts.js"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white" style="height: 1200px;">
+
+    <header id="top" name="top">
+        <div class="container">
+            <img width="60%" src="logo-transparent.png" class=" imd-fluid mx-auto d-block" style="max-width: 100%"
+                alt="brett boyd logo">
+        </div>
+
+    </header>
+
+<div id="wrapper" class="hidden">
+
+<nav class="navbar navbar-expand rounded sticky-top rounded justify-content-center">
+    <ul class="nav py-2 nav-pills justify-content-center">
+        <li class="nav-item mx-2 my-1 shadow">
+            <a class="nav-link bg-2 text-dark link-anim" href="index.html">Home</a>
+        </li>
+        <li class="nav-item mx-2 my-1 shadow">
+            <a class="nav-link bg-2 text-dark link-anim" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item mx-2 my-1 shadow">
+            <a class="nav-link bg-2 text-dark" href="#top">About me</a>
+        </li>
+        <li class="nav-item mx-2 my-1 shadow">
+            <a class="nav-link bg-2 text-dark" href="#contact">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+<!-- short bio with side img-->
+<div class="container my-5 bg-1 p-4 rounded shadow">
+    <div class="mb-3">
+        <h3 class="text-center">About Me</h3>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-5">
+            <p>
+                Hello! I'm Brett Boyd, and I compose music for various types of media. I'm currently a college student
+                at Lipscomb University, and I'm studying Music Composition and Web Development (evidenced by the site you're
+                currently on!). <br><br>
+                
+                Want to know more about the work I do? Check out some of my recent projects below!<br><br>
+            </p>
+
+            <button type="button" class="btn bg-2 bg4 text-dark border-0 my-3  d-block shadow">
+                <a href="projects.html" style="color: black">Projects</a>
+            </button>
+        </div>
+        <div class="col-md-7">
+            <img src="pic2.jpg" class="img-fluid rounded my-1" alt="brett boyd with guitar">
+        </div>
+    </div>
+
+    
+</div>
+
+<!-- copypasted contact form -->
+<div id="contact" name="contact" class="container bg-1 p-4 rounded shadow" style="width: 50%">
+    <h2 class="text-center">Let's get in touch!</h2>
+    <form class="my-3">
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="fname" placeholder="First name" name="fname">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="lname" placeholder="Last name" name="lname">
+            </div>
+        </div>
+        <div class="row p-3">
+            <input type="text" class="form-control" id="email" placeholder="Email address" name="email">
+        </div>
+        <textarea class="form-control rounded" id="comments" name="comments" rows="5"
+            placeholder="What can I do for you?"></textarea>
+
+        <button type="button" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block shadow">Send</button>
+    </form>
+</div>
+
+
+    <!-- copyright section -->
+    <footer>
+        <div class="d-flex pt-5 m-5 justify-content-center">
+            &copy; Copyright 2020 - Brett Boyd
+        </div>
+        <br><br>
+    </footer>
+
+</div>
+</body>
+
+</html>
