@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Brett Boyd</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script src="scripts.js"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white" style="height: 1200px;">
+
+<header id="top" name="top">
+    <div class="container">
+        <img width="60%" src="logo-transparent.png" class=" imd-fluid mx-auto d-block" style="max-width: 100%" alt="brett boyd logo">
+    </div>
+    
+</header>
+
+<div id="wrapper" class="hidden">
+
+<nav class="navbar navbar-expand rounded sticky-top rounded justify-content-center">
+    <ul class="nav py-2 nav-pills justify-content-center">
+        <li class="nav-item mx-2 my-1 shadow">
+            <a class="nav-link bg-2 text-dark" href="#top">Home</a>
+        </li>
+        <li class="nav-item mx-2 my-1 shadow">
+            <a class="nav-link bg-2 text-dark link-anim" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item mx-2 my-1 shadow">
+            <a class="nav-link bg-2 text-dark link-anim" href="about-me.html">About me</a>
+        </li>
+        <li class="nav-item mx-2 my-1 shadow">
+            <a class="nav-link bg-2 text-dark" href="#contact">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+<!-- short bio with side img-->
+<div class="container my-5 bg-1 p-4 rounded shadow">
+    <div class="mb-3">
+        <h1 class="text-center">Brett Boyd</h1>
+        <h5 class="text-center">media music composer</h5>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-5">
+            <p>
+                Hi! I'm Brett Boyd, and I create soundtracks for videogames,
+                films, videos, and trailers. <br><br>
+                I enjoy making big things out of small ideas, and I similarly
+                enjoy creating a unique musical atmosphere.<br><br>
+                If you'd like to know more, check out my latest musical endeavors. If
+                you want to learn more about my background and story, head to the  "about me page."
+                I don't want to bore you here on the homepage.
+                
+            </p>
+        </div>
+        <div class="col-md-7">
+            <img src="pic2.jpg" class="img-fluid rounded my-1 shadow" alt="brett boyd with guitar">
+        </div>
+    </div>
+</div>
+
+<!-- recent work section with image [thumbnail pic from video] -->
+<!-- button link to full projects page -->
+<div class="container my-5 bg-1 p-4 rounded shadow">
+    <div class="mb-4">
+        <h3 class="text-center">Recent Work</h3>
+    </div>
+
+    <!-- image carousel -->
+    <div id="recents" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner shadow">
+
+            <div class="carousel-item active">
+                <div class="dark">
+                    <img src="ss/ss1.png" alt="project 1" class="img-fluid rounded blur">
+                </div>
+                <div class="carousel-caption">
+                    <h3>Adaptive Game Score</h3>
+                    <p>A multilayered system that dynamically responds to player actions</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="dark">
+                    <img src="ss/ss2.png" alt="project 2" class="img-fluid rounded blur">
+                </div>
+                <div class="carousel-caption">
+                    <h3>A world of sound, from scratch</h3>
+                    <p>Comprehensive videogame SFX-- with an equally engaging score</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="dark">
+                    <img src="ss/ss3.png" alt="project 3" class="img-fluid rounded blur">
+                </div>
+                <div class="carousel-caption">
+                    <h3>Full Orchestra Theme</h3>
+                    <p>A larger-than-life game needs a larger-than-life soundtrack</p>
+                </div>
+            </div>
+        </div>
+
+        <ul class="carousel-indicators">
+            <li data-target="#recents" data-slide-to="0" class="active"></li>
+            <li data-target="#recents" data-slide-to="1"></li>
+            <li data-target="#recents" data-slide-to="2"></li>
+        </ul>
+  
+        <a class="carousel-control-prev" href="#recents" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#recents" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <p class="text-center mt-5">
+        Want to know more? Feel free to check out my projects and give the
+        audio demos a listen.
+    </p>
+
+    <button type="button" class="btn bg-2 text-dark py-2 mt-4 border-0 mx-auto d-block shadow" id="projects" name="projects">
+        <a class="nav-link bg-2 text-dark link-anim" href="projects.html">Projects</a>
+    </button>
+</div>
+
+<!-- copypasted contact form -->
+<div id="contact" name="contact" class="container bg-1 p-4 rounded shadow" style="width: 50%">
+    <h2 class="text-center">Let's get in touch!</h2>
+    <form class="my-3">
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="fname" placeholder="First name" name="fname">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="lname" placeholder="Last name" name="lname">
+            </div>
+        </div>
+        <div class="row p-3">
+            <input type="text" class="form-control" id="email" placeholder="Email address" name="email">
+        </div>
+        <textarea class="form-control rounded" id="comments" name="comments" rows="5" placeholder="What can I do for you?"></textarea>
+
+        <button type="button" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block shadow">Send</button>
+    </form>
+</div>
+
+
+<!-- copyright section -->
+<footer>
+    <div class="d-flex pt-5 m-5 justify-content-center">
+        &copy; Copyright 2020 - Brett Boyd
+    </div>
+    <br><br>
+</footer>
+<!-- 
+    notes:
+        on projects page: 
+            include link at bottom to read bio
+            include contact form too
+        on bio page:
+            include contact form
+
+-->
+</div>
+</body>
+</html>
