@@ -21,34 +21,46 @@
 </head>
 
 <body class="bg-black text-white" style="height: 1200px;">
-
     <header id="top" name="top">
         <div class="container">
             <img width="60%" src="logo-transparent.png" class=" imd-fluid mx-auto d-block" style="max-width: 100%"
                 alt="brett boyd logo">
         </div>
-
     </header>
 
 <div id="wrapper" class="hidden">
 
-<nav class="navbar navbar-expand rounded sticky-top rounded justify-content-center">
-    <ul class="nav py-2 nav-pills justify-content-center">
-        <li class="nav-item mx-2 my-1 shadow">
-            <a class="nav-link bg-2 text-dark link-anim" href="index.html">Home</a>
-        </li>
-        <li class="nav-item mx-2 my-1 shadow">
-            <a class="nav-link bg-2 text-dark link-anim" href="projects.html">Projects</a>
-        </li>
-        <li class="nav-item mx-2 my-1 shadow">
-            <a class="nav-link bg-2 text-dark" href="#top">About me</a>
-        </li>
-        <li class="nav-item mx-2 my-1 shadow">
-            <a class="nav-link bg-2 text-dark" href="#contact">Contact</a>
-        </li>
-    </ul>
-</nav>
+<!-- collapsible navbar -->
+<nav class="navbar navbar-expand-md sticky-top bg-black navbar-dark" style="text-align: center">
+    <div class="container">
+        <!-- Brand (mobile/small screen only) -->
+        <a class="navbar-brand d-sm-block d-md-none d-lg-none d-xl-none" href="#top">About Me</a>
 
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler ml-auto my-1" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse w-100" id="collapsibleNavbar">
+            <ul class="navbar-nav nav-pills justify-content-center w-100">
+                <li class="nav-item mx-2 my-1 shadow">
+                    <a class="nav-link bg-2 text-dark link-anim" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-2 my-1 shadow">
+                    <a class="nav-link bg-2 text-dark link-anim" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item mx-2 my-1 shadow">
+                    <a class="nav-link bg-2 text-dark" href="#top">About me</a>
+                </li>
+                <li class="nav-item mx-2 my-1 shadow">
+                    <a class="nav-link bg-2 text-dark" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 
 
@@ -81,24 +93,29 @@
 </div>
 
 <!-- copypasted contact form -->
-<div id="contact" name="contact" class="container bg-1 p-4 rounded shadow" style="width: 50%">
+<div id="contact" name="contact" class="container bg-1 p-4 mx-auto rounded shadow">
     <h2 class="text-center">Let's get in touch!</h2>
     <form class="my-3">
         <div class="row">
             <div class="col">
                 <input type="text" class="form-control" id="fname" placeholder="First name" name="fname">
+                <label for="fname" id="fname-label"></label>
             </div>
             <div class="col">
                 <input type="text" class="form-control" id="lname" placeholder="Last name" name="lname">
+                <label for="lname" id="lname-label"></label>
             </div>
         </div>
         <div class="row p-3">
             <input type="text" class="form-control" id="email" placeholder="Email address" name="email">
+            <label for="email" id="email-label"></label>
         </div>
         <textarea class="form-control rounded" id="comments" name="comments" rows="5"
             placeholder="What can I do for you?"></textarea>
+        <label for="comments" id="comments-label"></label>
 
-        <button type="button" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block shadow">Send</button>
+        <input type="submit" value="Send" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block shadow"
+            id="send"></input>
     </form>
 </div>
 

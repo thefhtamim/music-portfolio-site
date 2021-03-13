@@ -24,6 +24,8 @@ body {
 }
 
 
+
+
 /* colors:
 
 #ffffff
@@ -52,3 +54,10 @@ body {
 .bg-3 {
     background-color: #7c6369;
 }
+/* center the bxslider  */
+.parent-block img {
+  display: block;
+  margin: 0 auto;
+}
+/* make the bxslider arrows render BEHIND the navbar */  
+.bx-wrapper .bx-controls-direction a{z-index:100};
