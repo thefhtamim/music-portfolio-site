@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Resume</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script src="scripts.js"></script>
+
+    <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white" style="height: 1200px;">
+    <header id="top" name="top">
+        <div class="container">
+            <img width="60%" src="logo-transparent.png" class=" imd-fluid mx-auto d-block" style="max-width: 100%"
+                alt="brett boyd logo">
+        </div>
+    </header>
+
+<div id="wrapper" class="hidden">
+
+<!-- collapsible navbar -->
+<nav class="navbar navbar-expand-md sticky-top bg-black navbar-dark" style="text-align: center">
+    <div class="container">
+        <!-- Brand (mobile/small screen only) -->
+        <a class="navbar-brand d-sm-block d-md-none d-lg-none d-xl-none" href="#top">Resume</a>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler ml-auto my-1" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse w-100" id="collapsibleNavbar">
+            <ul class="navbar-nav nav-pills justify-content-center w-100">
+                <li class="nav-item mx-2 my-1 shadow">
+                    <a class="nav-link bg-2 text-dark link-anim" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-2 my-1 shadow">
+                    <a class="nav-link bg-2 text-dark link-anim" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item mx-2 my-1 shadow">
+                    <a class="nav-link bg-2 text-dark" href="#top">My Resume</a>
+                </li>
+                <li class="nav-item mx-2 my-1 shadow">
+                    <a class="nav-link bg-2 text-dark link-anim" href="about-me.html">About me</a>
+                </li>
+                <li class="nav-item mx-2 my-1 shadow">
+                    <a class="nav-link bg-2 text-dark" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- resume in iFrame -->
+<div class="container my-5 bg-1 p-4 rounded shadow">
+    <div class="mb-3">
+        <h3 class="text-center">My Resume</h3>
+    </div>
+
+    <iframe src="Brett Boyd resume Mar 2021.pdf" width="100%" height="1200px"></iframe>
+
+</div>
+
+<!-- copypasted contact form -->
+<div id="contact" name="contact" class="container bg-1 p-4 mx-auto rounded shadow">
+    <h2 class="text-center">Let's get in touch!</h2>
+    <form class="my-3">
+        <div class="row px-1 py-2">
+            <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+            <label for="name" id="name-label"></label>
+        </div>
+        <div class="row px-1 py-2">
+            <input type="text" class="form-control" id="email" placeholder="Email address" name="email">
+            <label for="email" id="email-label"></label>
+        </div>
+        <div class="row px-1 py-2">
+            <textarea class="form-control rounded" id="comments" name="comments" rows="5"
+                placeholder="What can I do for you?"></textarea>
+            <label for="comments" id="comments-label"></label>
+        </div>
+
+        <input type="submit" value="Send" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block shadow"
+            id="send"></input>
+    </form>
+</div>
+
+
+    <!-- copyright section -->
+    <footer>
+        <div class="d-flex pt-5 m-5 justify-content-center">
+            &copy; Copyright 2020 - Brett Boyd
+        </div>
+        <br><br>
+    </footer>
+
+</div>
+</body>
+
+</html>
