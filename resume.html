@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Resume</title>
     <meta charset="utf-8">
@@ -13,6 +12,9 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
     <script src="scripts.js"></script>
 
@@ -78,7 +80,7 @@
 <!-- copypasted contact form -->
 <div id="contact" name="contact" class="container bg-1 p-4 mx-auto rounded shadow">
     <h2 class="text-center">Let's get in touch!</h2>
-    <form class="my-3">
+    <form class="my-3" id="contactForm">
         <div class="row px-1 py-2">
             <input type="text" class="form-control" id="name" placeholder="Name" name="name">
             <label for="name" id="name-label"></label>
@@ -99,13 +101,13 @@
 </div>
 
 
-    <!-- copyright section -->
-    <footer>
-        <div class="d-flex pt-5 m-5 justify-content-center">
-            &copy; Copyright 2020 - Brett Boyd
-        </div>
-        <br><br>
-    </footer>
+<!-- copyright section -->
+<footer>
+    <div class="d-flex pt-5 m-5 justify-content-center">
+        &copy; Copyright 2020 - Brett Boyd
+    </div>
+    <br><br>
+</footer>
 
 </div>
 </body>

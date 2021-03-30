@@ -2,9 +2,6 @@
 var inTime = 450;
 var outTime = 250;
 
-
-
-
 // on page load
 $(function () {
     // fade in page on load
@@ -36,7 +33,9 @@ $(function () {
         slideWidth: 800
     });
 
-    $("#contact").submit(function(event) {
+    // validate contact form
+    $("#contactForm").submit(function(event) {
+        console.log("Button pressed");
         var isValid = true;
 
         // validate the name entry
