@@ -46,7 +46,8 @@ body {
 }
 
 .bg-1 {
-    background: linear-gradient(#947c54 , #695634);
+    /* background: linear-gradient(#947c54 , #695634); */
+    background: linear-gradient(rgb(114, 96, 64) , rgb(73, 60, 36));
 }
 .bg-2 {
     background: linear-gradient(#e4e0f1, #babfda);

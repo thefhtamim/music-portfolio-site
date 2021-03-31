@@ -30,7 +30,7 @@
         </div>
     </header>
 
-<div id="wrapper" class="hidden">
+<div id="wrapper" class="_hidden">
 
 <!-- collapsible navbar -->
 <nav class="navbar navbar-expand-md sticky-top bg-black navbar-dark" style="text-align: center">
@@ -68,22 +68,23 @@
 
 
 <!-- short bio with side img-->
-<div class="container my-5 bg-1 p-4 rounded shadow">
+<div class="container-fluid my-5 bg-1 p-4 shadow">
+<div class="container">
     <div class="mb-3">
         <h3 class="text-center">About Me</h3>
     </div>
-
+    
     <div class="row mt-4">
         <div class="col-md-5">
             <p>
                 Hello! I'm Brett Boyd, and I compose music for various types of media. I'm currently a college student
                 at Lipscomb University, and I'm studying Music Composition and Web Development (evidenced by the site you're
                 currently on!). <br><br>
-                
+    
                 Want to know more about the work I do? Check out some of my recent projects below!<br><br>
             </p>
-
-            <button type="button" class="btn bg-2 bg4 text-dark border-0 my-3  d-block shadow">
+    
+            <button type="button" class="btn bg-2 bg4 text-dark border-0 my-3 d-block shadow link-anim" href="projects.html">
                 <a href="projects.html" style="color: black">Projects</a>
             </button>
         </div>
@@ -92,9 +93,11 @@
         </div>
     </div>
 </div>
+</div>
 
 <!-- copypasted contact form -->
-<div id="contact" name="contact" class="container bg-1 p-4 mx-auto rounded shadow">
+<div class="container-fluid bg-1 p-4 mx-auto shadow">
+<div class="container" id="contact" name="contact">
     <h2 class="text-center">Let's get in touch!</h2>
     <form class="my-3" id="contactForm">
         <div class="row px-1 py-2">
@@ -110,17 +113,18 @@
                 placeholder="What can I do for you?"></textarea>
             <label for="comments" id="comments-label"></label>
         </div>
-
+    
         <input type="submit" value="Send" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block shadow"
             id="send"></input>
     </form>
+</div>
 </div>
 
 
 <!-- copyright section -->
 <footer>
     <div class="d-flex pt-5 m-5 justify-content-center">
-        &copy; Copyright 2020 - Brett Boyd
+        &copy; Copyright 2021 - Brett Boyd
     </div>
     <br><br>
 </footer>

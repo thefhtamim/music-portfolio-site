@@ -31,7 +31,7 @@
     
 </header>
 
-<div id="wrapper" class="hidden">
+<div id="wrapper" class="_hidden">
 
 <!-- collapsible navbar -->
 <nav class="navbar navbar-expand-md sticky-top bg-black navbar-dark" style="text-align: center">
@@ -68,7 +68,8 @@
 
 
 <!-- short bio with side img-->
-<div class="container my-5 bg-1 p-4 rounded shadow">
+<div class="container-fluid my-5 bg-1 p-4 shadow">
+<div class="container">
     <div class="mb-3">
         <h1 class="text-center">Brett Boyd</h1>
         <h5 class="text-center">media music composer</h5>
@@ -82,9 +83,9 @@
                 I enjoy making big things out of small ideas, and I similarly
                 enjoy creating a unique musical atmosphere.<br><br>
                 If you'd like to know more, check out my latest musical endeavors. If
-                you want to learn more about my background and story, head to the  "about me page."
+                you want to learn more about my background and story, head to the "about me page."
                 I don't want to bore you here on the homepage.
-                
+    
             </p>
         </div>
         <div class="col-md-7">
@@ -92,13 +93,15 @@
         </div>
     </div>
 </div>
+</div>
 
 <!-- recent work section with carousel -->
-<div class="container my-5 bg-1 p-4 rounded shadow">
+<div class="container-fluid my-5 bg-1 p-4 shadow">
+<div class="container">
     <div class="mb-4">
         <h3 class="text-center">Recent Work</h3>
     </div>
-
+    
     <!-- bootstrap image carousel -->
     <div id="recents" class="carousel slide px-0 px-lg-5" data-ride="carousel">
         <div class="carousel-inner shadow">
@@ -130,7 +133,7 @@
                 </div>
             </div>
         </div>
-        <ul class="carousel-indicators">
+        <ul class="carousel-indicators py-0">
             <li data-target="#recents" data-slide-to="0" class="active"></li>
             <li data-target="#recents" data-slide-to="1"></li>
             <li data-target="#recents" data-slide-to="2"></li>
@@ -142,31 +145,32 @@
             <span class="carousel-control-next-icon"></span>
         </a>
     </div>
-
+    
     <!-- (new) bxslider image carousel -->
     <!-- <div class="container-fluid ml-auto">
-        <div class="bxslider">
-            <div><img src="ss/ss1.png" title="A multilayered system that dynamically responds to player actions"></div>
-            <div><img src="ss/ss2.png" title="Comprehensive videogame SFX-- with an equally engaging score"></div>
-            <div><img src="ss/ss3.png" title="A larger-than-life game needs a larger-than-life soundtrack"></div>
-        </div>
-        
-        
-        <p class="text-center mt-5">
-            Want to know more? Feel free to check out my projects and give the
-            audio demos a listen.
-        </p>
-        
-        <button type="button" class="btn bg-2 text-dark py-2 mt-4 border-0 mx-auto d-block shadow" id="projects"
-            name="projects">
-            <a class="nav-link bg-2 text-dark link-anim" href="projects.html">Projects</a>
-        </button>
-    </div> -->
-    
+            <div class="bxslider">
+                <div><img src="ss/ss1.png" title="A multilayered system that dynamically responds to player actions"></div>
+                <div><img src="ss/ss2.png" title="Comprehensive videogame SFX-- with an equally engaging score"></div>
+                <div><img src="ss/ss3.png" title="A larger-than-life game needs a larger-than-life soundtrack"></div>
+            </div>
+            
+            
+            <p class="text-center mt-5">
+                Want to know more? Feel free to check out my projects and give the
+                audio demos a listen.
+            </p>
+            
+            <button type="button" class="btn bg-2 text-dark py-2 mt-4 border-0 mx-auto d-block shadow" id="projects"
+                name="projects">
+                <a class="nav-link bg-2 text-dark link-anim" href="projects.html">Projects</a>
+            </button>
+        </div> -->
+</div>
 </div>
 
 <!-- copypasted contact form -->
-<div id="contact" name="contact" class="container bg-1 p-4 mx-auto rounded shadow">
+<div class="container-fluid bg-1 p-4 mx-auto shadow">
+<div class="container" id="contact" name="contact">
     <h2 class="text-center">Let's get in touch!</h2>
     <form class="my-3" id="contactForm">
         <div class="row px-1 py-2">
@@ -182,10 +186,11 @@
                 placeholder="What can I do for you?"></textarea>
             <label for="comments" id="comments-label"></label>
         </div>
-
+    
         <input type="submit" value="Send" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block shadow"
             id="send"></input>
     </form>
+</div>
 </div>
 
 
@@ -195,7 +200,7 @@
 <!-- copyright section -->
 <footer>
     <div class="d-flex pt-5 m-5 justify-content-center">
-        &copy; Copyright 2020 - Brett Boyd
+        &copy; Copyright 2021 - Brett Boyd
     </div>
     <br><br>
 </footer>
