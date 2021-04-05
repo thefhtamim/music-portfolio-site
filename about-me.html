@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
+    <!-- animate on scroll effect -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <script src="scripts.js"></script>
 
     <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
@@ -68,7 +71,7 @@
 
 
 <!-- short bio with side img-->
-<div class="container-fluid my-5 bg-1 p-4 shadow">
+<div class="container-fluid my-5 bg-1 p-4 shadow" data-aos="fade-up">
 <div class="container">
     <div class="mb-3">
         <h3 class="text-center">About Me</h3>
@@ -96,7 +99,7 @@
 </div>
 
 <!-- copypasted contact form -->
-<div class="container-fluid bg-1 p-4 mx-auto shadow">
+<div class="container-fluid bg-1 p-4 mx-auto shadow" data-aos="fade-up">
 <div class="container" id="contact" name="contact">
     <h2 class="text-center">Let's get in touch!</h2>
     <form class="my-3" id="contactForm">
@@ -130,6 +133,11 @@
 </footer>
 
 </div>
-</body>
 
+<!-- animate on scroll script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({});
+</script>
+</body>
 </html>

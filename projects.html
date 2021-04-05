@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
+    <!-- animate on scroll effect -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <script src="scripts.js"></script>
 
     <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
@@ -65,7 +68,7 @@
 </nav>
 
 <!-- page header -->
-<div class="container-fluid my-5 bg-1 p-4 rounded shadow">
+<div class="container-fluid my-5 bg-1 p-4 rounded shadow" data-aos="fade-up">
 <div class="container">
     <h1 class="text-center display-3">Recent Projects</h1>
     <p class="text-center">
@@ -75,7 +78,7 @@
 </div>
 
 <!-- project 1 -->
-<div class="container-fluid my-5 bg-1 p-4 rounded shadow">
+<div class="container-fluid my-5 bg-1 p-4 rounded shadow" data-aos="fade-up">
 <div class="container">
     <div class="mb-3">
         <h1 class="text-center">Adaptive Game Score</h1>
@@ -98,7 +101,7 @@
 </div>
 
 <!-- project 2 -->
-<div class="container-fluid my-5 bg-1 p-4 rounded shadow">
+<div class="container-fluid my-5 bg-1 p-4 rounded shadow" data-aos="fade-up">
 <div class="container">
     <div class="mb-3">
         <h1 class="text-center">A world of sound, from scratch</h1>
@@ -124,7 +127,7 @@
 </div>
 
 <!-- project 3 -->
-<div class="container-fluid my-5 bg-1 p-4 rounded shadow">
+<div class="container-fluid my-5 bg-1 p-4 rounded shadow" data-aos="fade-up">
 <div class="container">
     <div class="mb-3">
         <h1 class="text-center">Full Orchestra Theme</h1>
@@ -149,7 +152,7 @@
 </div>
 
 <!-- copypasted contact form -->
-<div class="container-fluid bg-1 p-4 mx-auto shadow">
+<div class="container-fluid bg-1 p-4 mx-auto shadow" data-aos="fade-up">
 <div class="container" id="contact" name="contact">
     <h2 class="text-center">Let's get in touch!</h2>
     <form class="my-3" id="contactForm">
@@ -181,8 +184,11 @@
     </div>
     <br><br>
 </footer>
-
 </div>
+<!-- animate on scroll script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({});
+</script>
 </body>
-
 </html>

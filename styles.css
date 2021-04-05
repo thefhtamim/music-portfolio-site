@@ -1,9 +1,11 @@
 html {
   scroll-behavior: smooth;
+  height: 100%; /* for parallax effect */
 }
 
 body {
     background: linear-gradient(#2a3e58 , black 35%, #2a3e58);
+    height: 100%; /* for parallax effect */
 }
 
 .blur {
@@ -49,16 +51,39 @@ body {
     /* background: linear-gradient(#947c54 , #695634); */
     background: linear-gradient(rgb(114, 96, 64) , rgb(73, 60, 36));
 }
+.bg-1-light {
+    background: linear-gradient(rgba(114, 96, 64, 0.6) , rgba(73, 60, 36, 0.6));
+}
 .bg-2 {
     background: linear-gradient(#e4e0f1, #babfda);
 }
 .bg-3 {
     background-color: #7c6369;
 }
+
+    
+    
+.parallax {
+    /* The image used */
+    background-image: url("pic2b.jpg");
+    background-color: rgb(114, 96, 64);
+
+    /* Full height */
+    height: 50em;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /* center the bxslider  */
 .parent-block img {
-  display: block;
-  margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 /* make the bxslider arrows render BEHIND the navbar */  
 .bx-wrapper .bx-controls-direction a{z-index:100};
+

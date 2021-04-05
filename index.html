@@ -15,6 +15,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
+    <!-- animate on scroll effect -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="scripts.js"></script>
 
@@ -68,7 +71,7 @@
 
 
 <!-- short bio with side img-->
-<div class="container-fluid my-5 bg-1 p-4 shadow">
+<!-- <div class="container-fluid my-5 bg-1 p-4 shadow" data-aos="fade-up">
 <div class="container">
     <div class="mb-3">
         <h1 class="text-center display-3">Brett Boyd</h1>
@@ -93,10 +96,44 @@
         </div>
     </div>
 </div>
+</div> -->
+
+<!-- short bio with side img-->
+<div class="container-fluid my-5 p-4 shadow parallax" data-aos="fade-up">
+    <div class="container">
+        <div class="row mt-md-5 my-3">
+            <div class="col-md-4 bg-1-light shadow">
+                <div class="mb-5">
+                    <h1 class="display-4">Brett Boyd</h1>
+                    <h5>Media Music Composer</h5>
+                </div>
+                <p class="my-5">
+                    Hi! I'm Brett Boyd, and I create soundtracks for videogames,
+                    films, videos, and trailers. <br><br>
+                    I enjoy making big things out of small ideas, and I similarly
+                    enjoy creating a unique musical atmosphere.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-end my-md-5">
+            <div class="col-lg-4 bg-1-light shadow">
+                <p class="mt-3 mb-5">
+                    If you'd like to know more, check out my latest musical endeavors on
+                    the "Projects" page. I have a few examples of the variety I can produce
+                    in my creativity. I'm always open to challenging myself with something
+                    new!
+                    <br><br>
+                    If you want to learn more about my background and story as a composer,
+                    head to the "About Me" page.
+                </p>
+            </div>
+        
+        </div>
+    </div>
 </div>
 
 <!-- recent work section with carousel -->
-<div class="container-fluid my-5 bg-1 p-4 shadow">
+<div class="container-fluid my-5 bg-1 p-4 shadow" data-aos="fade-up">
 <div class="container">
     <div class="mb-4">
         <h3 class="text-center">Recent Work</h3>
@@ -173,7 +210,7 @@
 </div>
 
 <!-- copypasted contact form -->
-<div class="container-fluid bg-1 p-4 mx-auto shadow">
+<div class="container-fluid bg-1 p-4 mx-auto shadow" data-aos="fade-up">
 <div class="container" id="contact" name="contact">
     <h2 class="text-center">Let's get in touch!</h2>
     <form class="my-3" id="contactForm">
@@ -210,5 +247,11 @@
 </footer>
 
 </div>
+
+<!-- animate on scroll script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({});
+</script>
 </body>
 </html>
