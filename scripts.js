@@ -5,7 +5,6 @@ var outTime = 250;
 // on page load
 $(function () {
     // fade in page on load
-    console.log("fade in");
     $("#wapper").removeClass("hidden");
     $("#wrapper").fadeIn(inTime, "easeInQuad");
     
@@ -22,6 +21,11 @@ $(function () {
             });
         }
     });
+
+    // change picture offset on extra small screens
+    if ($(window).width() < 576) {
+        $(".parallax").css({"background-position-y":"-50px"});
+    }
 
     // bxslider carousel stuff
     $(".bxslider").bxSlider({
