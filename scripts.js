@@ -93,6 +93,10 @@ $(function () {
                 $("#mSpinner").hide();
                 $("#mBody").text("I'll get back to you soon!");
                 $("#mButton").show();
+                // reset form fields
+                $("#name").val("");
+                $("#email").val("");
+                $("#comments").val("");
             }, delayMs);
 
 
