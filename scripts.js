@@ -4,10 +4,11 @@ var outTime = 250;
 
 // on page load
 $(function () {
+
     // fade in page on load
     $("#wapper").removeClass("hidden");
     $("#wrapper").fadeIn(inTime, "easeInQuad");
-    
+
     // fade out on link click
     $(".link-anim").click(function (link) {
         var href = $(this).attr("href");
@@ -22,23 +23,13 @@ $(function () {
         }
     });
 
-    // change picture offset on extra small screens
-    if ($(window).width() < 576) {
-        $(".parallax").css({"background-position-y":"-50px"});
-    }
-
-    // bxslider carousel stuff
-    $(".bxslider").bxSlider({
-        auto: true,
-        pager: false,
-        stopAutoOnClick: true,
-        captions: true,
-        mode: "horizontal",
-        slideWidth: 800
-    });
-
+    // // change picture offset on extra small screens
+    // if ($(window).width() < 576) {
+    //     $(".parallax").css({ "background-position-y": "-50px" });
+    // }
+    
     // validate contact form
-    $("#contactForm").submit(function(event) {
+    $("#contactForm").submit(function (event) {
         var isValid = true;
 
         // validate the name entry
@@ -73,24 +64,25 @@ $(function () {
             $("#email").next().addClass("text-warning");
             $("#name").next().addClass("text-warning");
             $("#comments").next().addClass("text-warning");
-    
+
             event.preventDefault();
         } else {
             var address = "brboyd@mail.lipscomb.edu";
             var name = $("#name").val().trim();
             var body = $("#comments").val().trim();
             var subject = "I\'m " + name + " and I'd like to contact you!"
-            
+
             $("#email").next().removeClass("text-warning");
             $("#name").next().removeClass("text-warning");
             $("#comments").next().removeClass("text-warning");
-            if (confirm("This will copy your message into an email so that you can send it.")) {
-                window.open("mailto:" + address + "?subject=" + subject + "&body=" + body); // send email
-                // reset form fields
-                $("#name").val("");
-                $("#email").val("");
-                $("#comments").val("");
-            }
+
+            // if (confirm("This will copy your message into an email so that you can send it.")) {
+            //     window.open("mailto:" + address + "?subject=" + subject + "&body=" + body); // send email
+            //     // reset form fields
+            //     $("#name").val("");
+            //     $("#email").val("");
+            //     $("#comments").val("");
+            // }
         }
     });
 });

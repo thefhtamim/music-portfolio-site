@@ -36,14 +36,11 @@ body {
 
 
 /* colors:
-
 #ffffff
 #000000
-
 #9a98a7
 #79626b
 #30445d
-
 */
 
 .bg-white {
@@ -70,27 +67,38 @@ body {
 
     
     
-.parallax {
-    /* The image used */
+/* .parallax {
     background-image: url("pic2b.jpg");
     background-color: rgb(114, 96, 64);
 
-    /* Full height */
     height: 50em;
 
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
+} */
+
+.swiper-container {
+    width: 60rem;
+    height: 33.75rem;
+    /* padding: 50px; */
 }
 
-
-/* center the bxslider  */
-.parent-block img {
-    display: block;
-    margin: 0 auto;
+.swiper-slide {
+    width: 60rem;
+    height: 33.75rem;
+    background-position: center;
+    background-size: cover;
+    /* -webkit-filter: blur(3px);
+    filter: blur(3px); */
 }
-/* make the bxslider arrows render BEHIND the navbar */  
-.bx-wrapper .bx-controls-direction a{z-index:100};
 
+/* .bg-image {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
