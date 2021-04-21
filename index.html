@@ -12,6 +12,8 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
+	<script src="https://kit.fontawesome.com/d687bf9a07.js" crossorigin="anonymous"></script>
+
 	<!-- animate on scroll effect -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -161,7 +163,7 @@
 				
 
 					<button type="button" class="btn bg-2 bg4 text-dark border-0 mt-5 d-block mx-auto shadow
-        link-anim zoom" href="projects.html">
+        			link-anim zoom" href="projects.html">
 						<a href="projects.html" style="color: black">Learn More</a>
 					</button>
 				</div>
@@ -170,7 +172,7 @@
 		</div>
 
 		<!-- copypasted contact form -->
-		<div class="container-fluid bg-1 p-4 mx-auto shadow" data-aos="fade-up" action="sendEmail.php">
+		<div class="container-fluid bg-1 p-4 mx-auto shadow" data-aos="fade-up">
 			<div class="container" id="contact" name="contact" data-aos="flip-down">
 				<h2 class="text-center">Let's get in touch!</h2>
 				<form class="my-3" id="contactForm">
@@ -187,14 +189,37 @@
 							placeholder="What can I do for you?"></textarea>
 						<label for="comments" id="comments-label"></label>
 					</div>
-
-					<input type="submit" value="Send" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto
-        d-block shadow zoom" id="send"></input>
+					<button type="button" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block
+					shadow zoom" id="send">Send</button>
 				</form>
 			</div>
 		</div>
 
-
+		<!-- modal popup feedback -->
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog modal-dialog-centered modal-lg text-dark">
+				<div class="modal-content">
+		
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h2 id="mHead" class="modal-title mx-auto">Working...</h2>
+					</div>
+		
+					<!-- Modal body -->
+					<div id="mBody" class="modal-body text-center">
+						<div class="d-flex justify-content-center">
+							<div id="mSpinner" class="spinner-border" style="width: 4rem; height: 4rem;"></div>
+						</div>
+					</div>
+		
+					<!-- Modal footer -->
+					<div id="mButton" class="modal-footer justify-content-center pt-5">
+						<button type="button" class="btn btn-primary bg-success text-light border-0 shadow zoom" data-dismiss="modal">Done</button>
+					</div>
+		
+				</div>
+			</div>
+		</div>
 
 
 

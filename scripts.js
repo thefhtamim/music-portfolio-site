@@ -29,7 +29,7 @@ $(function () {
     // }
     
     // validate contact form
-    $("#contactForm").submit(function (event) {
+    $("#send").click(function (event) {
         var isValid = true;
 
         // validate the name entry
@@ -64,8 +64,7 @@ $(function () {
             $("#email").next().addClass("text-warning");
             $("#name").next().addClass("text-warning");
             $("#comments").next().addClass("text-warning");
-
-            event.preventDefault();
+            //event.preventDefault();
         } else {
             var address = "brboyd@mail.lipscomb.edu";
             var name = $("#name").val().trim();
@@ -76,6 +75,27 @@ $(function () {
             $("#name").next().removeClass("text-warning");
             $("#comments").next().removeClass("text-warning");
 
+            $("#myModal").modal("show");
+            console.log("show");
+
+            var delayMs = 1000;
+            console.log("print");
+
+            $.ajax({
+                type: 'POST',
+                url: 'sendEmail.php',
+            });
+
+            // after delay, hide loading icon and show text
+            setTimeout(function () {
+                $("#mHead").addClass("text-success");
+                $("#mHead").html("Email sent <i class=\"far fa-check-circle\"></i>");
+                $("#mSpinner").hide();
+                $("#mBody").text("I'll get back to you soon!");
+                $("#mButton").show();
+            }, delayMs);
+
+
             // if (confirm("This will copy your message into an email so that you can send it.")) {
             //     window.open("mailto:" + address + "?subject=" + subject + "&body=" + body); // send email
             //     // reset form fields
@@ -85,4 +105,6 @@ $(function () {
             // }
         }
     });
+
+
 });
