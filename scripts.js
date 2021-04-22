@@ -2,6 +2,10 @@
 var inTime = 450;
 var outTime = 250;
 
+var parallaxSpeed = -1.0;
+var screenSize = $(window).width();
+var imgPos = "50% 50%";
+
 // on page load
 $(function () {
 
@@ -23,11 +27,21 @@ $(function () {
         }
     });
 
-    // // change picture offset on extra small screens
-    // if ($(window).width() < 576) {
-    //     $(".parallax").css({ "background-position-y": "-50px" });
-    // }
-    
+    // slow parallax for extra small screens
+    if (screenSize < 576) {  
+        parallaxSpeed = 0.8;
+    }
+
+    // adjust image offset based on the current page
+    if (document.title == "Projects") {
+        imgPos = "0 50%";
+    }
+    // parallax scroll init
+    $(".jarallax").jarallax({
+        speed: parallaxSpeed,
+        imgPosition: imgPos,
+    });
+
     // validate contact form
     $("#send").click(function (event) {
         var isValid = true;
@@ -70,16 +84,13 @@ $(function () {
             var name = $("#name").val().trim();
             var body = $("#comments").val().trim();
             var subject = "I\'m " + name + " and I'd like to contact you!"
+            var delayMs = 1000;
 
             $("#email").next().removeClass("text-warning");
             $("#name").next().removeClass("text-warning");
             $("#comments").next().removeClass("text-warning");
 
             $("#myModal").modal("show");
-            console.log("show");
-
-            var delayMs = 1000;
-            console.log("print");
 
             $.ajax({
                 type: 'POST',

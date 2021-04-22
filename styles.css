@@ -4,7 +4,8 @@ html {
 }
 
 body {
-    background: linear-gradient(#2a3e58 , black 35%, #2a3e58);
+    /* background: linear-gradient(#2a3e58 , black 35%, #2a3e58); */
+    background: linear-gradient(#0b131d, #162233, #0b131d);
     height: 100%; /* for parallax effect */
 }
 
@@ -48,6 +49,7 @@ body {
 }
 
 .bg-black {
+    /* background-color: #2a3e58; */
     background-color: #2a3e58;
 }
 
