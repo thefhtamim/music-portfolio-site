@@ -1,7 +1,37 @@
-<!DOCTYPE html>
+<?php
+
+//create short variable names
+$name=$_POST['name'];
+$email=$_POST['email'];
+$comments=$_POST['comments'];
+
+//set up some static information
+$toaddress = "brboyd@mail.lipscomb.edu";
+
+$subject = "Hey! I'm " + $name + " and I'd like to contact you.";
+
+$mailcontent = $name + " left a message:\n\n" + $comments;
+
+$fromaddress = $email;
+
+//invoke mail() function to send mail
+mail($toaddress, $subject, $mailcontent,$fromaddress);
+
+?>
+<!-- <html>
+<head>
+<title>Bob's Auto Parts - comments Submitted</title>
+</head>
+<body>
+<h1>comments submitted</h1>
+<p>Your comments has been sent.</p>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
-    <title>Resume</title>
+    <title>Message Sent</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -9,13 +39,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
     <script src="https://kit.fontawesome.com/d687bf9a07.js" crossorigin="anonymous"></script>
     
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
     <!-- animate on scroll effect -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -43,7 +71,7 @@
 <nav class="navbar navbar-expand-md sticky-top bg-black navbar-dark" style="text-align: center">
     <div class="container">
         <!-- Brand (mobile/small screen only) -->
-        <a class="navbar-brand d-sm-block d-md-none d-lg-none d-xl-none" href="#top">Resume</a>
+        <a class="navbar-brand d-sm-block d-md-none d-lg-none d-xl-none" href="#top">About Me</a>
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler ml-auto my-1" type="button" data-toggle="collapse"
             data-target="#collapsibleNavbar">
@@ -59,13 +87,10 @@
                     <a class="nav-link bg-2 text-dark link-anim" href="projects.html">Projects</a>
                 </li>
                 <li class="nav-item mx-2 my-1 shadow zoom">
-                    <a class="nav-link bg-2 text-dark" href="#top">My Resume</a>
+                    <a class="nav-link bg-2 text-dark link-anim" href="resume.html">My Resume</a>
                 </li>
                 <li class="nav-item mx-2 my-1 shadow zoom">
                     <a class="nav-link bg-2 text-dark link-anim" href="about-me.html">About me</a>
-                </li>
-                <li class="nav-item mx-2 my-1 shadow zoom">
-                    <a class="nav-link bg-2 text-dark" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -74,38 +99,17 @@
 
 
 
-<!-- resume in iFrame -->
-<div class="container-fluid my-5 bg-1 p-4 rounded shadow" data-aos="fade-up">
+<!-- short bio with side img-->
+<div class="container-fluid my-5 bg-1 p-4 shadow" data-aos="fade-up">
 <div class="container">
     <div class="mb-3">
-        <h3 class="text-center">My Resume</h3>
+        <h3 class="text-center">Message sent!</h3>
     </div>
-    <iframe src="Brett Boyd resume Mar 2021.pdf" width="100%" height="1200px"></iframe>
+    <p>
+        Thanks for getting in touch! I'll get back to you soon.
+    </p>
+    
 </div>
-</div>
-
-<!-- copypasted contact form -->
-<div class="container-fluid bg-1 p-4 mx-auto shadow" data-aos="fade-up">
-    <div class="container" id="contact" name="contact" data-aos="flip-down">
-        <h2 class="text-center">Let's get in touch!</h2>
-        <form class="my-3" id="contactForm" action="processfeedback.php" method="post">
-            <div class="row px-1 py-2">
-                <input type="text" class="form-control" id="name" placeholder="Name" name="name">
-                <label for="name" id="name-label"></label>
-            </div>
-            <div class="row px-1 py-2">
-                <input type="text" class="form-control" id="email" placeholder="Email address" name="email">
-                <label for="email" id="email-label"></label>
-            </div>
-            <div class="row px-1 py-2">
-                <textarea class="form-control rounded" id="comments" name="comments" rows="5"
-                    placeholder="What can I do for you?"></textarea>
-                <label for="comments" id="comments-label"></label>
-            </div>
-            <button type="button" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block
-					shadow zoom" id="send">Send</button>
-        </form>
-    </div>
 </div>
 
 
@@ -118,10 +122,11 @@
 </footer>
 
 </div>
-</body>
+
 <!-- animate on scroll script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({once: true});
 </script>
+</body>
 </html>

@@ -1,16 +1,21 @@
 html {
   scroll-behavior: smooth;
-  height: 100%; /* for parallax effect */
 }
 
 body {
-    /* background: linear-gradient(#2a3e58 , black 35%, #2a3e58); */
+    font-family: 'Roboto', sans-serif;
+    font-size: 105%;
     background: linear-gradient(#0b131d, #162233, #0b131d);
     height: 100%; /* for parallax effect */
 }
 
+.heading-custom {
+    font-weight: 300;
+    font-size: 275%;
+}
+
 .zoom{
-    transition: transform 0.2s; /* Animation */
+    transition: transform 0.2s;
 }
 .zoom:hover {
     transform: scale(1.07);
@@ -49,7 +54,6 @@ body {
 }
 
 .bg-black {
-    /* background-color: #2a3e58; */
     background-color: #2a3e58;
 }
 
@@ -58,7 +62,7 @@ body {
     background: linear-gradient(rgb(114, 96, 64) , rgb(73, 60, 36));
 }
 .bg-1-light {
-    background: linear-gradient(rgba(114, 96, 64, 0.7) , rgba(73, 60, 36, 0.7));
+    background: linear-gradient(rgba(114, 96, 64, 0.8) , rgba(73, 60, 36, 0.8));
 }
 .bg-2 {
     background: linear-gradient(#e4e0f1, #babfda);
@@ -66,20 +70,6 @@ body {
 .bg-3 {
     background-color: #7c6369;
 }
-
-    
-    
-/* .parallax {
-    background-image: url("pic2b.jpg");
-    background-color: rgb(114, 96, 64);
-
-    height: 50em;
-
-    background-attachment: fixed;
-    background-position: 50% 30%;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
 .swiper-container {
     width: 60rem;
@@ -95,12 +85,3 @@ body {
     /* -webkit-filter: blur(3px);
     filter: blur(3px); */
 }
-
-/* .bg-image {
-    -webkit-filter: blur(3px);
-    filter: blur(3px);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */

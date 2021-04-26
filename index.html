@@ -9,10 +9,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
 	<script src="https://kit.fontawesome.com/d687bf9a07.js" crossorigin="anonymous"></script>
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
 	<!-- animate on scroll effect -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -81,12 +83,12 @@
 			<img class="jarallax-img" src="pic2b.jpg" alt="Brett Boyd">
 			<div class="container">
 				<div class="row mt-md-5 my-3" data-aos="fade-up-left">
-					<div class="col-md-4 bg-1-light shadow">
-						<div class="mb-5">
-							<h1 class="display-4">Brett Boyd</h1>
+					<div class="col-md-4 bg-1-light shadow rounded">
+						<div class="mt-1 mt-md-3 mb-1 mb-md-5">
+							<h1 class="heading-custom">Brett Boyd</h1>
 							<h5>Media Music Composer</h5>
 						</div>
-						<p class="my-5">
+						<p class="my-md-5">
 							Hi! I'm Brett Boyd, and I create soundtracks for videogames,
 							films, videos, and trailers. <br><br>
 							I enjoy making big things out of small ideas, and I similarly
@@ -95,8 +97,8 @@
 					</div>
 				</div>
 				<div class="row justify-content-end my-md-5" data-aos="fade-up-right">
-					<div class="col-lg-4 bg-1-light shadow">
-						<p class="mt-3 mb-5">
+					<div class="col-lg-4 bg-1-light shadow rounded">
+						<p class="mt-1 mt-md-3 mb-1 mb-md-5">
 							If you'd like to know more, check out my latest musical endeavors on
 							the "Projects" page. I have a few examples of the variety I can produce
 							in my creativity. I'm always open to challenging myself with something
@@ -122,30 +124,24 @@
 				<div id="recents" class="carousel slide px-0 px-lg-5" data-ride="carousel">
 					<div class="carousel-inner shadow">
 						<div class="carousel-item active">
-							<div class="dark">
-								<img src="ss/ss1.png" alt="project 1" class="img-fluid rounded blur">
-							</div>
+							<div class="dark"><img src="ss/ss3.png" alt="project 3" class="img-fluid rounded blur"></div>
 							<div class="carousel-caption">
-								<h4>Adaptive Game Score</h4>
-								<p class="d-none d-sm-block">A multilayered system that dynamically responds to player actions</p>
+								<h4>Full Orchestra Theme</h4>
+								<p class="d-none d-sm-block">A larger-than-life game needs a larger-than-life soundtrack</p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="dark">
-								<img src="ss/ss2.png" alt="project 2" class="img-fluid rounded blur">
-							</div>
+							<div class="dark"><img src="ss/ss2.png" alt="project 2" class="img-fluid rounded blur"></div>
 							<div class="carousel-caption">
 								<h4>8-Bit Theme</h4>
 								<p class="d-none d-sm-block">A modern take on bleeps and bloops, faithfully confined to 4 audio channels </p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="dark">
-								<img src="ss/ss3.png" alt="project 3" class="img-fluid rounded blur">
-							</div>
+							<div class="dark"><img src="ss/ss1.png" alt="project 1" class="img-fluid rounded blur"></div>
 							<div class="carousel-caption">
-								<h4>Full Orchestra Theme</h4>
-								<p class="d-none d-sm-block">A larger-than-life game needs a larger-than-life soundtrack</p>
+								<h4>Adaptive Game Score</h4>
+								<p class="d-none d-sm-block">A multilayered system that dynamically responds to player actions</p>
 							</div>
 						</div>
 					</div>
@@ -175,7 +171,7 @@
 		<div class="container-fluid bg-1 p-4 mx-auto shadow" data-aos="fade-up">
 			<div class="container" id="contact" name="contact" data-aos="flip-down">
 				<h2 class="text-center">Let's get in touch!</h2>
-				<form class="my-3" id="contactForm">
+				<form class="my-3" id="contactForm" action="processfeedback.php" method="post">
 					<div class="row px-1 py-2">
 						<input type="text" class="form-control" id="name" placeholder="Name" name="name">
 						<label for="name" id="name-label"></label>

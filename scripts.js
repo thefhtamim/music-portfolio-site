@@ -9,15 +9,10 @@ var imgPos = "50% 50%";
 // on page load
 $(function () {
 
-    // fade in page on load
-    $("#wapper").removeClass("hidden");
-    $("#wrapper").fadeIn(inTime, "easeInQuad");
-
     // fade out on link click
     $(".link-anim").click(function (link) {
         var href = $(this).attr("href");
         var currentHref = $(location).attr("href");
-        // if old link and new one are the same (update this to check more thoroughly)
         if (currentHref != href) {
             link.preventDefault();
             $("#wrapper").fadeOut(outTime, "easeOutQuad", function () {
@@ -29,10 +24,10 @@ $(function () {
 
     // slow parallax for extra small screens
     if (screenSize < 576) {  
-        parallaxSpeed = 0.8;
+        parallaxSpeed = 1.0;
     }
 
-    // adjust image offset based on the current page
+    // adjust image offset for the projects page
     if (document.title == "Projects") {
         imgPos = "0 50%";
     }
@@ -41,6 +36,7 @@ $(function () {
         speed: parallaxSpeed,
         imgPosition: imgPos,
     });
+    
 
     // validate contact form
     $("#send").click(function (event) {
@@ -84,7 +80,7 @@ $(function () {
             var name = $("#name").val().trim();
             var body = $("#comments").val().trim();
             var subject = "I\'m " + name + " and I'd like to contact you!"
-            var delayMs = 1000;
+            var delayMs = 500;
 
             $("#email").next().removeClass("text-warning");
             $("#name").next().removeClass("text-warning");
@@ -92,33 +88,22 @@ $(function () {
 
             $("#myModal").modal("show");
 
-            $.ajax({
-                type: 'POST',
-                url: 'sendEmail.php',
-            });
-
-            // after delay, hide loading icon and show text
+            $("#mHead").addClass("text-success");
+            $("#mHead").html("Email sent <i class=\"far fa-check-circle\"></i>");
+            $("#mSpinner").hide();
+            $("#mBody").text("I'll get back to you soon!");
+            $("#mButton").show();
             setTimeout(function () {
-                $("#mHead").addClass("text-success");
-                $("#mHead").html("Email sent <i class=\"far fa-check-circle\"></i>");
-                $("#mSpinner").hide();
-                $("#mBody").text("I'll get back to you soon!");
-                $("#mButton").show();
+                $("#contactForm").submit();
                 // reset form fields
                 $("#name").val("");
                 $("#email").val("");
                 $("#comments").val("");
             }, delayMs);
 
-
-            // if (confirm("This will copy your message into an email so that you can send it.")) {
-            //     window.open("mailto:" + address + "?subject=" + subject + "&body=" + body); // send email
-            //     // reset form fields
-            //     $("#name").val("");
-            //     $("#email").val("");
-            //     $("#comments").val("");
-            // }
-        }
+            // backup email send method
+            // window.open("mailto:" + address + "?subject=" + subject + "&body=" + body);           
+    }
     });
 
 
