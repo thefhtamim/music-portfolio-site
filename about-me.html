@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-black text-white" style="height: 1200px;">
+<body class="bg-black text-white">
     <header id="top" name="top">
         <div class="container">
             <img width="35%" src="logo-transparent.png" class=" imd-fluid mx-auto d-block" style="max-width: 100%"
@@ -158,8 +158,28 @@
                 <label for="comments" id="comments-label"></label>
             </div>
             <button type="button" class="btn bg-2 bg4 text-dark border-0 my-3 mx-auto d-block
-            shadow zoom" id="send">Send</button>
+					shadow zoom" id="send">Send</button>
         </form>
+    </div>
+</div>
+<!-- submission modal -->
+<div class="modal fade" id="loading">
+    <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
+        <div class="modal-content py-1">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h2 class="modal-title mx-auto">Working...</h2>
+            </div>
+
+            <!-- Modal body -->
+            <div id="mBody" class="modal-body text-center py-5">
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border" style="width: 4rem; height: 4rem;"></div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 

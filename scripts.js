@@ -6,7 +6,7 @@ var parallaxSpeed = -1.0;
 var screenSize = $(window).width();
 var imgPos = "50% 50%";
 
-
+function randomNumber(min, max) { return Math.floor((Math.random() * max) + min); }
 
 
 // on page load
@@ -80,11 +80,7 @@ $(function () {
             $("#comments").next().addClass("text-warning");
             //event.preventDefault();
         } else {
-            var address = "brboyd@mail.lipscomb.edu";
-            var name = $("#name").val().trim();
-            var body = $("#comments").val().trim();
-            var subject = "I\'m " + name + " and I'd like to contact you!"
-            var delayMs = 500;
+            var delayMs = randomNumber(400, 800);
 
             $("#email").next().removeClass("text-warning");
             $("#name").next().removeClass("text-warning");

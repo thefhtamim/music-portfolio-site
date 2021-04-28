@@ -1,14 +1,10 @@
 <?php
-
-//create short variable names
 $toaddress = "brboyd@mail.lipscomb.edu";
-$fromaddress = $_POST["name"];
-$email = $_POST["email"];
-$comments = $_POST["comments"];
-$subject = "Hey! Test message!";
+$fromaddress = $_POST["email"];
+$name = $_POST["name"];
+$comments = $name + " sent you a message:\n\n" +  $_POST["comments"];
+$subject = $name + " wants to get in touch.";
 
-
-//invoke mail() function to send mail
 mail($toaddress, $subject, $comments, $fromaddress);
 ?>
 
@@ -91,13 +87,6 @@ mail($toaddress, $subject, $comments, $fromaddress);
     </div>
     <p>
         Thanks for getting in touch! I'll get back to you soon.
-    </p>
-    <p>
-        To: <?php echo $toaddress; ?><br>
-        From: <?php echo $fromaddress; ?><br>
-        From: <?php echo $email; ?><br>
-        Message: <?php echo $comments; ?><br>
-        Subject: <?php echo $subject; ?><br>
     </p>
     
 </div>
