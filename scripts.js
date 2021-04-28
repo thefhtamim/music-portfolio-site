@@ -6,9 +6,13 @@ var parallaxSpeed = -1.0;
 var screenSize = $(window).width();
 var imgPos = "50% 50%";
 
+
+
+
 // on page load
 $(function () {
 
+    
     // fade out on link click
     $(".link-anim").click(function (link) {
         var href = $(this).attr("href");
@@ -86,14 +90,10 @@ $(function () {
             $("#name").next().removeClass("text-warning");
             $("#comments").next().removeClass("text-warning");
 
-            $("#myModal").modal("show");
-
-            $("#mHead").addClass("text-success");
-            $("#mHead").html("Email sent <i class=\"far fa-check-circle\"></i>");
-            $("#mSpinner").hide();
-            $("#mBody").text("I'll get back to you soon!");
-            $("#mButton").show();
+            $("#loading").modal("show");
+        
             setTimeout(function () {
+                console.log("sent");
                 $("#contactForm").submit();
                 // reset form fields
                 $("#name").val("");

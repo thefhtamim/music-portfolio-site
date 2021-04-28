@@ -1,34 +1,18 @@
 <?php
 
 //create short variable names
-$name=$_POST['name'];
-$email=$_POST['email'];
-$comments=$_POST['comments'];
-
-//set up some static information
 $toaddress = "brboyd@mail.lipscomb.edu";
+$fromaddress = $_POST["name"];
+$email = $_POST["email"];
+$comments = $_POST["comments"];
+$subject = "Hey! Test message!";
 
-$subject = "Hey! I'm " + $name + " and I'd like to contact you.";
-
-$mailcontent = $name + " left a message:\n\n" + $comments;
-
-$fromaddress = $email;
 
 //invoke mail() function to send mail
-mail($toaddress, $subject, $mailcontent,$fromaddress);
-
+mail($toaddress, $subject, $comments, $fromaddress);
 ?>
-<!-- <html>
-<head>
-<title>Bob's Auto Parts - comments Submitted</title>
-</head>
-<body>
-<h1>comments submitted</h1>
-<p>Your comments has been sent.</p>
-</body>
-</html> -->
 
-<!-- <!DOCTYPE html> -->
+
 <html lang="en">
 <head>
     <title>Message Sent</title>
@@ -57,7 +41,7 @@ mail($toaddress, $subject, $mailcontent,$fromaddress);
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-black text-white" style="height: 1200px;">
+<body class="bg-black text-white">
     <header id="top" name="top">
         <div class="container">
             <img width="35%" src="logo-transparent.png" class=" imd-fluid mx-auto d-block" style="max-width: 100%"
@@ -107,6 +91,13 @@ mail($toaddress, $subject, $mailcontent,$fromaddress);
     </div>
     <p>
         Thanks for getting in touch! I'll get back to you soon.
+    </p>
+    <p>
+        To: <?php echo $toaddress; ?><br>
+        From: <?php echo $fromaddress; ?><br>
+        From: <?php echo $email; ?><br>
+        Message: <?php echo $comments; ?><br>
+        Subject: <?php echo $subject; ?><br>
     </p>
     
 </div>
